@@ -8,7 +8,7 @@ export default function App() {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask =() => {
-    setTaskItems([...taskItems, task])
+    setTaskItems([...taskItems, task]);
     setTask(null);
   }
 
@@ -28,7 +28,10 @@ export default function App() {
             taskItems.map((item, index) => {
              return(
                 <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                  <Task text={item} />
+                 {/* <Task text={item} />  */}
+                
+                <Task text={'Task 1'}/>
+                <Task text={'Task 2'}/>
                 </TouchableOpacity>
              )
             })
@@ -42,7 +45,7 @@ export default function App() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.writeTaskWrapper}
       >
-        <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)}></TextInput>
+        <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)}/>
 
         <TouchableOpacity onPress={() => handleAddTask()} >
           <View style={styles.addWrapper}>
@@ -76,7 +79,7 @@ const styles = StyleSheet.create({
   
   items: {
     marginTop: 30,
-    justifyContent: 'space-between',
+  
   },
 
   writeTaskWrapper: {

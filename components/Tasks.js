@@ -6,7 +6,7 @@ const Task =(props) => {
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
-                <TouchableOpacity style={styles.square}></TouchableOpacity>
+                <View style={styles.square}></View>
                 <Text style={styles.itemText}>{props.Text}</Text>
             </View>
             <View style={styles.circular}></View>
@@ -21,7 +21,9 @@ const styles = StyleSheet.create ({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: 20
+        marginBottom: 20,
+        flexDirection: 'row',
+
     },
 
     square: {
@@ -40,8 +42,8 @@ const styles = StyleSheet.create ({
     },
 
     itemText: {
-        maxWidth: '80%',
-        justifyContent: 'space-between'
+        maxWidth: '80%'
+        
     },
 
     circular: {
