@@ -30,7 +30,7 @@ export default function App() {
                 <TouchableOpacity key={index} onPress={() => completeTask(index)}>
                  <Task text={item} /> 
                 </TouchableOpacity>
-             )
+                   )
             })
           }
 
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     bottom: 60,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center'
   },
 
